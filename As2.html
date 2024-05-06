@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Age Validation</title>
+<script>
+    function validateAge() {
+        var ageInput = document.getElementById("age").value;
+        var age = parseInt(ageInput);
+
+        if (isNaN(age)) {
+            alert("Please enter a valid age.");
+        } else {
+            if (age < 18) {
+                alert("Sorry, you are underage.");
+            } else {
+                alert("Welcome!");
+            }
+        }
+    }
+</script>
+</head>
+<body>
+    <h2>Age Validation</h2>
+    <form>
+        <label for="age">Enter your age:</label>
+        <input type="text" id="age" name="age" required>
+        <button type="button" onclick="validateAge()">Submit</button>
+    </form>
+</body>
+</html>
